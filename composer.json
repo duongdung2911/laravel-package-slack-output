@@ -2,7 +2,14 @@
   "name": "codegym/laravel-slack-output",
   "description": "Sends a message to Slack when something goes wrong with your Laravel application.",
   "keywords": ["laravel", "slack", "exception"],
-  "license": "MIT",
+  "type": "php",
+  "license": "aaa",
+  "authors": [
+    {
+      "name": "codegym",
+      "email": "dtdung2911@gmail.com"
+    }
+  ],
   "require": {
     "php": ">=5.5.9",
     "maknz/slack": "~1.7",
