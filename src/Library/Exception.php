@@ -1,11 +1,11 @@
 <?php
 
-namespace NicolasMahe\SlackOutput\Library;
+namespace CodeGym\SlackOutput\Library;
 
 use Illuminate\Support\Facades\Artisan;
 use Exception as E;
 use Illuminate\Support\Facades\Request;
-use NicolasMahe\SlackOutput\Helper\ExceptionHelper;
+use CodeGym\SlackOutput\Helper\ExceptionHelper;
 
 class Exception
 {

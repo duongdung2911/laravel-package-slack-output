@@ -1,6 +1,6 @@
 <?php
 
-namespace NicolasMahe\SlackOutput;
+namespace CodeGym\SlackOutput;
 
 use Illuminate\Support\ServiceProvider as ServiceProviderParent;
 
@@ -28,7 +28,7 @@ class ServiceProvider extends ServiceProviderParent
         }
 
         //command
-        $this->commands(Command\SlackPost::class, Command\SlackStats::class);
+        $this->commands(Command\SlackPost::class);
     }
 
 

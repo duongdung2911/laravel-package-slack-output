@@ -100,7 +100,7 @@ return [
         */
 
         'classes' => [
-            \App\Models\User::class
+            \App\User::class
         ],
 
         /*
