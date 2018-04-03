@@ -3,7 +3,7 @@
   "description": "Sends a message to Slack when something goes wrong with your Laravel application.",
   "keywords": ["laravel", "slack", "exception"],
   "type": "php",
-  "license": "aaa",
+  "license": "MIT",
   "authors": [
     {
       "name": "codegym",
