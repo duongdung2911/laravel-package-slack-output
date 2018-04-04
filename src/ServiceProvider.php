@@ -28,7 +28,7 @@ class ServiceProvider extends ServiceProviderParent
         }
 
         //command
-        $this->commands(Command\SlackPost::class);
+        $this->commands(Command\SlackPost::class, Command\SlackStats::class);
     }
 
 

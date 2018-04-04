@@ -6,6 +6,9 @@ use Illuminate\Console\Scheduling\Event;
 use Illuminate\Queue\Events\JobFailed;
 use Exception;
 
+use CodeGym\SlackOutput\Library\ScheduledCommand;
+use CodeGym\SlackOutput\Library\Stats;
+use CodeGym\SlackOutput\Library\JobFailed as JF;
 use CodeGym\SlackOutput\Library\Exception as E;
 
 class Service
@@ -59,6 +62,40 @@ class Service
         $this->channel_exception         = $channel["exception"];
         $this->channel_stats             = $channel["stats"];
     }
+
+
+    /**
+     * Create an stats object
+     *
+     * @return Stats
+     */
+    public function stats()
+    {
+        Stats::output($this->channel_stats);
+    }
+
+
+    /**
+     * Send to slack the results of a scheduled command.
+     *
+     * @param Event $event
+     */
+    public function scheduledCommand(Event $event)
+    {
+        ScheduledCommand::output($event, $this->channel_scheduled_command);
+    }
+
+
+    /**
+     * Output a failed job to slack
+     *
+     * @param JobFailed $event
+     */
+    public function jobFailed(JobFailed $event)
+    {
+        JF::output($event, $this->channel_job_failed);
+    }
+
 
     /**
      * Report an exception to slack
